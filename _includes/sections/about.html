@@ -10,16 +10,9 @@
             <p>A soceity for all math lovers.</p>
             <p> </p>
     
-               <section class="about__skills">
-                <h2 class="section-title">Skills</h2>
-                <ul class="about__skills-list">
-                    {% assign skills = site.data.skills | sort: 'name' %}
-                    {% for skill in skills %}
-                        <li>
-                            <img class="lazy invert" src="/assets/img/blank.png" data-src="/assets/img/logo-{{ skill.name | downcase | remove: '.' }}.webp" alt="{{ skill.name }} logo">
-                            {{ skill.name }}
-                        </li>
-                    {% endfor %}
+              
+                       
+                
                 </ul>
             </section>
         </div>
