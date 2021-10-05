@@ -4,16 +4,26 @@
             <img class="lazy" src="/assets/img/blank.png" data-src="/assets/img/jayvee.webp" alt="My photo">
             <canvas class="particles-js-canvas-el" width="1092" height="1560" style="width: 100%; height: 100%;"></canvas>
         </div>
-        <canvas class="particles-js-canvas-el" width="1092" height="1560" style="width: 100%; height: 100%;"></canvas>
+    
         <div class="about__content">
             <h1 class="about__intro">Welcome to Mathematical Society</h1>
             <p>A soceity for all math lovers.</p>
             <p> </p>
     
-                        
+               <section class="about__skills">
+                <h2 class="section-title">Skills</h2>
+                <ul class="about__skills-list">
+                    {% assign skills = site.data.skills | sort: 'name' %}
+                    {% for skill in skills %}
+                        <li>
+                            <img class="lazy invert" src="/assets/img/blank.png" data-src="/assets/img/logo-{{ skill.name | downcase | remove: '.' }}.webp" alt="{{ skill.name }} logo">
+                            {{ skill.name }}
+                        </li>
+                    {% endfor %}
                 </ul>
             </section>
         </div>
     </div>
     <img class="about__bg invert lazy" src="/assets/img/blank.png" data-src="/assets/img/bg-about.webp" alt="">
-</section>
+</section>          
+             
